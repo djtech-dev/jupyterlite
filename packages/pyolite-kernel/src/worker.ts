@@ -42,6 +42,7 @@ async function loadPyodideAndPackages() {
     await micropip.install([
       '${_pyoliteWheelUrl}'
     ]);
+    await micropip.install('pip'); # Pip support
     await micropip.install('ipython');
     import pyolite
   `);
